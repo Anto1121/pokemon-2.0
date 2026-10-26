@@ -1,0 +1,63 @@
+/* Estilos propios del proyecto. Bootstrap se encarga del grid, tarjetas,
+   formularios, alertas, tipografía y utilidades de espaciado. */
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #292238;
+  background: #f7f4fb;
+}
+
+body {
+  margin: 0;
+  background: #f7f4fb;
+}
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado {
+  color: #292238;
+  background: linear-gradient(135deg, #d9c8f2, #eee6fb);
+}
+
+.encabezado h1 {
+  letter-spacing: -0.03em;
+}
+
+.contenido {
+  flex: 1;
+}
+
+.tarjeta {
+  border: 0;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+}
+
+.imagen-personaje {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+footer {
+  color: #665778;
+  background: #eee6fb;
+}
+
+/* Respeta la preferencia del usuario por movimiento reducido. */
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta {
+    transition: none;
+  }
+  .tarjeta:hover {
+    transform: none;
+  }
+}
